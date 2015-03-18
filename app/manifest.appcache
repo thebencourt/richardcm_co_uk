@@ -4,3 +4,6 @@ CACHE MANIFEST
 favicon.ico
 public/css/styles.min.css
 public/js/vendor.min.js
+
+NETWORK:
+*
