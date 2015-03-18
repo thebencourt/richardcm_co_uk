@@ -1,0 +1,14 @@
+extends layout.jade
+
+block meta
+  title Portfolio | Richard CM
+
+block title
+  h1 Portfolio
+
+block content
+  for item in items
+    .item
+      a(href="/portfolio/#{item.slug}")
+        img.item__banner(src="#{item.banner}", alt="#{item.title}")
+        h2.item__title= item.title

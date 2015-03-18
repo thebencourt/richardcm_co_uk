@@ -1,0 +1,30 @@
+extends layout.jade
+
+block meta
+  title Edit #{item.title}
+
+block title
+  h1 Edit #{item.title}
+
+block content
+  .row
+    .col-xs-12
+      form(action="/admin/#{item.id}", method="post", role="form")
+        .form-group
+          label(for="title") Title
+          input(type="text", name="title", class="form-control", placeholder="Title", value="#{item.title}")
+        .form-group
+          label(for="category") Category
+          input(type="text", name="category", class="form-control", placeholder="Category", value="#{item.category}")
+        .form-group
+          label(for="banner") Banner
+          input(type="url", name="banner", class="form-control", placeholder="Banner URL", value="#{item.banner}")
+        .form-group
+          label(for="skills") Skills
+          input(type="text", name="skills", class="form-control", placeholder="Skills", value="#{item.skills}")
+          span.help-block Separate skills with a comma (eg: Skill 1, Skill 2)
+        .form-group
+          label(for="description") Description
+          textarea(name="description", class="form-control", placeholder="Description")= item.description
+        input(type="hidden", name="images")
+        input(type="submit", class="btn btn-primary", value="Save")

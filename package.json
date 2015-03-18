@@ -1,0 +1,38 @@
+{
+  "name": "richardcm_co_uk",
+  "version": "0.0.1",
+  "description": "Portfolio site for environment artist Richard Court-Mathews",
+  "main": "app/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ben Court",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "",
+    "body-parser": "",
+    "connect-flash": "",
+    "cookie-parser": "",
+    "express": "",
+    "express-session": "",
+    "jade": "",
+    "method-override": "",
+    "mongoose": "",
+    "morgan": "",
+    "passport": "",
+    "passport-local": ""
+  },
+  "devDependencies": {
+    "gulp": "",
+    "gulp-cache": "",
+    "gulp-concat": "",
+    "gulp-imagemin": "",
+    "gulp-jshint": "",
+    "gulp-minify-css": "",
+    "gulp-rename": "",
+    "gulp-sass": "",
+    "gulp-uglify": "",
+    "gulp-uncss": "",
+    "gulp-watch": ""
+  }
+}

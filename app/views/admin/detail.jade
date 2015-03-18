@@ -1,0 +1,41 @@
+extends layout.jade
+
+block meta
+  title= item.title
+
+block title
+  h1= item.title
+
+block content
+  p.item__details
+    strong Banner:
+    br
+    img(src="#{item.banner}", alt="#{item.title}", class="item__banner")
+  p.item__details
+    strong Slug:
+    br
+    = item.slug
+  p.item__details
+    strong Category:
+    br
+    = item.category
+  p.item__details
+    strong Skills:
+    br
+    = item.skills
+  p.item__details
+    strong Description:
+    br
+    = item.description
+  p.item__details
+    strong Image(s):
+    br
+    - var imgList = item.images.split(',');
+      for image in imgList
+        img(src="#{image}", alt="#{item.title}" class="item__image")
+  hr
+  a(href="/admin", class="btn btn-default") Back to Admin
+  &nbsp;
+  a(href="/admin/#{item.id}/edit", class="btn btn-primary") Edit Item
+  &nbsp;
+  a(href="/admin/#{item.id}/delete", class="btn btn-danger") Delete Item

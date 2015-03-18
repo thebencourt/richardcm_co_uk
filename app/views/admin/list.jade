@@ -1,0 +1,32 @@
+extends layout.jade
+
+block meta
+  title Dashboard
+
+block title
+  h1 Dashboard
+
+block content
+  .row
+    .col-xs-12
+      table.table.table-bordered.table-striped
+        thead
+          tr
+            th Title
+            th Category
+            th Slug
+            th Actions
+        tbody
+          for item in items
+            tr
+              td
+                a(href="/admin/#{item.id}")= item.title
+              td= item.category
+              td= item.slug
+              td
+                a(href="/admin/#{item.id}/edit", class="btn btn-xs btn-primary") Edit 
+                &nbsp;
+                a(href="/admin/#{item.id}/delete", class="btn btn-xs btn-danger") Delete
+  .row
+    .col-xs-12
+      a(href="/admin/add", class="btn btn-default") Add Item

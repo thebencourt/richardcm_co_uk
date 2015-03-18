@@ -1,0 +1,39 @@
+@import '../bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap';
+
+body {
+    padding-top: 70px;
+}
+
+.item {
+  margin: 0 0 2em;
+  position: relative;
+
+  a {
+    display: block;
+  }
+
+  &__banner {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+
+  &__title {
+    background: rgba(0, 0, 0, 0.5);
+    bottom: 0;
+    color: #fff;
+    left: 0;
+    margin: 0;
+    padding: 15px;
+    position: absolute;
+    right: 0;
+  }
+
+  &__image {
+    display: block;
+    height: auto;
+    margin: 0 auto 2em;
+    max-width: 940px;
+    width: 100%;
+  }
+}

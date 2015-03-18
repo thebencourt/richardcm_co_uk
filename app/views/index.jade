@@ -1,0 +1,19 @@
+extends layout.jade
+
+block meta
+    title Richard CM
+
+block title
+    h1 Richard CM
+
+block content
+  p.
+    I'm Richard Court I'm a games environment artist based in South Wales My 
+    skills include High-Poly Modeling, Low-Poly Modeling and Texture creation. 
+    Most my work is created using Maya, Zbrush, Photoshop, Mudbox, UDK, Unity 
+    Engine and Marmoset Toolbag
+  for item in items
+    .item
+      a(href="/portfolio/#{item.slug}")
+        img.item__banner(src="#{item.banner}", alt="#{item.title}")
+        h2.item__title= item.title

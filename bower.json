@@ -1,0 +1,22 @@
+{
+  "name": "richardcm_co_uk",
+  "version": "0.0.1",
+  "description": "Portfolio site for environment artist Richard Court-Mathews",
+  "main": "app/server.js",
+  "authors": [
+    "Ben Court"
+  ],
+  "license": "MIT",
+  "homepage": "http://www.richardcm.co.uk",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "app/assets/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass-official": "*"
+  }
+}

@@ -1,0 +1,20 @@
+extends layout.jade
+
+block meta
+  title #{item.title} | Richard CM
+
+block title
+  h1= item.title
+
+block content
+  img(src="#{item.banner}", alt="#{item.title}", class="item__banner")
+  h3 Skills
+  ul.item__skills
+    - var skillsList = item.skills.split(', ');
+    for skill in skillsList
+      li= skill
+  h3 Description
+  p= item.description
+  - var imgList = item.images.split(',');
+  for image in imgList
+    img(src="#{image}", alt="#{item.title}", class="item__image")
