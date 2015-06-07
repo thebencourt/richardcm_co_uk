@@ -1,19 +1,21 @@
-var $addBtn = $('#addBtn'),
-  $saveBtn = $('#saveBtn'),
-  $form = $('form'),
-  $btnContainer = $addBtn.parent(),
-  imgCount = 1,
-  imgList = [];
+ const addBtn = document.getElementById('addBtn');
+ const saveBtn = document.getElementById('saveBtn');
+ const $form = $('form');
+ const $btnContainer = $('#addBtn').parent();
+ const imgList = [];
 
-$addBtn.click(function () {
-  'use strict';
+ let imgCount = 1;
+
+
+addBtn.addEventListener('click', (ev) => {
   imgCount++;
   $('<div class="form-group"><label for="image' + imgCount + '">Image ' + imgCount + '</label><input type="url" name="image' + imgCount + '" class="form-control" placeholder="Image ' + imgCount + '"></div>').insertBefore($btnContainer);
 });
 
-$saveBtn.click(function () {
-  'use strict';
-  for (var i = 1; i <= imgCount; i++) {
+
+saveBtn.addEventListener('click', (ev) => {
+  ev.preventDefault();
+  for (let i = 1; i < imgCount; i++) {
     imgList.push($('input[name="image' + i + '"]').val());
   }
   $('input[name="images"]').val(imgList.join(','));
