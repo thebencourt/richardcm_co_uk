@@ -44,14 +44,21 @@ module.exports = function (app, passport, Item) {
   });
 
 
-  /**
-   * Private admin pages
-   */
-
-  // Register new admin user
-  app.get('/register', function (req, res) {
-    res.render('admin/register', {message: req.flash('signupMessage')});
+  app.get('/sitemap', function (req, res) {
+    var items = Item.find();
+    var domain = 'http://richardcm.co.uk';
+    items.select('slug updated_at');
+    items.exec(function (err, items) {
+      if (err) {
+        res.send(err);
+      }
+      res.render('sitemap', {domain: domain, items: items});
+    });
   });
+
+  // app.get('/register', function (req, res) {
+    // res.render('admin/register', {message: ''});
+  // });
 
   // Process registration form
   app.post('/register', passport.authenticate('local-register', {

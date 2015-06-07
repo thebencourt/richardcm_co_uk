@@ -41,7 +41,6 @@ app.use(passport.session());
 app.use(flash());
 app.use(express.static(__dirname, 'public'));
 
-
 /**
  * Setup Routes
  */
