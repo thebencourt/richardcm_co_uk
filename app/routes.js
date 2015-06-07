@@ -52,6 +52,7 @@ module.exports = function (app, passport, Item) {
       if (err) {
         res.send(err);
       }
+      res.set('Content-Type', 'application/xml');
       res.render('sitemap', {domain: domain, items: items});
     });
   });
