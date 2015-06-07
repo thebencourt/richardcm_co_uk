@@ -21,6 +21,7 @@
     "express-session": "",
     "jade": "",
     "method-override": "",
+    "moment": "^2.10.3",
     "mongoose": "",
     "morgan": "",
     "passport": "",

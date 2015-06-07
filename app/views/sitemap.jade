@@ -9,4 +9,4 @@ urlset(xmlns="http://www.sitemaps.org/schemas/sitemap/0.9")
   - for item in items
     url
       loc #{domain}/portfolio/#{item.slug}
-      lastmod #{item.updated_at}
+      lastmod #{moment(item.updated_at).format('YYYY-MM-DD')}
