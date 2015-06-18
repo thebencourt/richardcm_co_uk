@@ -3,7 +3,7 @@ extends layout.jade
 block meta
   - var shortDesc = item.description.substr(0, 156);
   title #{item.title} | Richard CM
-  meta(name="desc", content="#{shortDesc}")
+  meta(name="description", content="#{shortDesc}")
 
 block title
   h1= item.title
