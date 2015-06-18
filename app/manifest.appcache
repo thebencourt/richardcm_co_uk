@@ -1,9 +1,0 @@
-CACHE MANIFEST
-# 07-036-2015 v1.1
-
-favicon.ico
-public/css/styles.min.css
-public/js/vendor.min.js
-
-NETWORK:
-*
