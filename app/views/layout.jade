@@ -2,17 +2,14 @@ doctype html
 html(lang="en")
   head
     block meta
-      title Richard CM | Environment Artist
-      meta(name="description", content="Portfolio of Environment Artist Richard Court Mathews")
-      meta()
     link(href="/public/css/styles.min.css", rel="stylesheet")
-    meta(charset="UTF-8")
+    meta(charset="utf-8")
     meta(name="viewport", content="width=device-width")
     meta(name="google-site-verification", content="pzS3wPus5_FRFPJVA16ZeEzXbvLPWTBq0x1Zr7CBP4s")
     meta(name="msvalidate.01", content="845CBB7CF8F1721F952FECC37649769D")
     meta(name="theme-color", content="#222222")
   body
-    nav.navbar.navbar-inverse.navbar-fixed-top
+    nav.navbar.navbar-inverse.navbar-fixed-top(role="banner")
       .container
         .navbar-header
           button(type="button", class="navbar-toggle collapsed", data-toggle="collapse", data-target="#bs-example-navbar-collapse-1")
@@ -22,12 +19,12 @@ html(lang="en")
             span.icon-bar
           a.navbar-brand(href="/") Richard CM
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
-          ul.nav.navbar-nav.navbar-right
+          ul.nav.navbar-nav.navbar-right(role="navigation")
             li
               a(href="/portfolio") Portfolio
             li
               a(href="/about") About
-    .container
+    .container(role="main")
       .page-header
         block title
           h1 Richard CM
